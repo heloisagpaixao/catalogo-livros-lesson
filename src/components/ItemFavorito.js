@@ -29,9 +29,7 @@ export default function ItemFavorito({ item, cores, onRemover, onEditar }) {
       setTimeout(() => setFeedback(null), 2500);
     }
   }
-}
-
-function handleRemover() {
+  function handleRemover() {
   Alert.alert(
     "Remover favorito",
     `Deseja remover "${livro?.titulo}" dos favoritos?`,
@@ -131,6 +129,9 @@ return (
     )}
   </View>
 );
+}
+
+
 
 const styles = StyleSheet.create({
   card: {

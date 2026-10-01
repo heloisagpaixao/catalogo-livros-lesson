@@ -148,3 +148,66 @@
 {"_e":"metro:bundling:progress","_t":1790874681812,"id":"6","progress":0.9408598347971828,"total":966,"current":937}
 {"_e":"metro:bundling:progress","_t":1790874681912,"id":"6","progress":0.9816611124439383,"total":977,"current":968}
 {"_e":"metro:bundling:failed","_t":1790874681966,"id":"6","message":"SyntaxError: C:\\Users\\51907505822\\Documents\\GitHub\\catalogo-livros-lesson\\src\\components\\ItemFavorito.js: 'return' outside of function. (51:0)\n\n  49 | const corFeedback = feedback?.tipo === \"sucesso\" ? cores.success : cores.error;\n  50 |\n> 51 | return (\n     | ^\n  52 |   <View\n  53 |     style={[\n  54 |       styles.card,","importStack":null,"filename":"src\\components\\ItemFavorito.js","targetModuleName":null,"originModulePath":null}
+{"_e":"root:init","_t":1790876608411,"format":"v0-jsonl","version":"57.0.24"}
+{"_e":"env:mode","_t":1790876608425,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1790876608449,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1790876611541,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1790876616637,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1790876619360,"plugins":[]}
+{"_e":"metro:instantiate","_t":1790876634818,"atlas":false,"workers":13,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1790876773406,"id":"3","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1790876773407,"id":"3","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790876773414,"id":"3","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790876773515,"id":"3","progress":0.0225,"total":20,"current":3}
+{"_e":"metro:bundling:progress","_t":1790876773637,"id":"3","progress":0.027777777777777776,"total":84,"current":14}
+{"_e":"metro:bundling:progress","_t":1790876773737,"id":"3","progress":0.027777777777777776,"total":185,"current":16}
+{"_e":"metro:bundling:progress","_t":1790876773976,"id":"3","progress":0.027777777777777776,"total":185,"current":17}
+{"_e":"metro:bundling:progress","_t":1790876774079,"id":"3","progress":0.13805656089554752,"total":218,"current":81}
+{"_e":"metro:bundling:progress","_t":1790876774182,"id":"3","progress":0.13805656089554752,"total":304,"current":109}
+{"_e":"metro:bundling:progress","_t":1790876774282,"id":"3","progress":0.2116506917408495,"total":363,"current":167}
+{"_e":"metro:bundling:progress","_t":1790876774382,"id":"3","progress":0.24200052029136318,"total":372,"current":183}
+{"_e":"metro:bundling:progress","_t":1790876774477,"id":"3","progress":0.2446525609897098,"total":372,"current":184}
+{"_e":"metro:bundling:progress","_t":1790876774578,"id":"3","progress":0.2521691872341223,"total":462,"current":232}
+{"_e":"metro:bundling:progress","_t":1790876774677,"id":"3","progress":0.29250233036123074,"total":551,"current":298}
+{"_e":"metro:bundling:progress","_t":1790876774780,"id":"3","progress":0.33390960221988053,"total":623,"current":360}
+{"_e":"metro:bundling:progress","_t":1790876774880,"id":"3","progress":0.34012371879716996,"total":631,"current":368}
+{"_e":"metro:bundling:progress","_t":1790876775131,"id":"3","progress":0.3419747288157304,"total":631,"current":369}
+{"_e":"metro:bundling:progress","_t":1790876775233,"id":"3","progress":0.43293170612367793,"total":652,"current":429}
+{"_e":"metro:bundling:progress","_t":1790876775333,"id":"3","progress":0.5212635179316937,"total":705,"current":509}
+{"_e":"metro:bundling:progress","_t":1790876775433,"id":"3","progress":0.6249543462381301,"total":740,"current":585}
+{"_e":"metro:bundling:progress","_t":1790876775536,"id":"3","progress":0.6800893911283522,"total":770,"current":635}
+{"_e":"metro:bundling:progress","_t":1790876775636,"id":"3","progress":0.8049406057627916,"total":817,"current":733}
+{"_e":"metro:bundling:progress","_t":1790876775752,"id":"3","progress":0.8220444444444444,"total":825,"current":748}
+{"_e":"metro:bundling:progress","_t":1790876775854,"id":"3","progress":0.8220444444444444,"total":878,"current":784}
+{"_e":"metro:bundling:progress","_t":1790876775954,"id":"3","progress":0.8248015212624324,"total":904,"current":821}
+{"_e":"metro:bundling:progress","_t":1790876776054,"id":"3","progress":0.898356736427963,"total":939,"current":890}
+{"_e":"metro:bundling:progress","_t":1790876776154,"id":"3","progress":0.9343099097371439,"total":958,"current":926}
+{"_e":"metro:bundling:progress","_t":1790876776259,"id":"3","progress":0.9979581424417361,"total":979,"current":978}
+{"_e":"metro:bundling:failed","_t":1790876781058,"id":"3","message":"SyntaxError: C:\\Users\\51907505822\\Documents\\GitHub\\catalogo-livros-lesson\\src\\components\\ItemFavorito.js: 'return' outside of function. (51:0)\n\n  49 | const corFeedback = feedback?.tipo === \"sucesso\" ? cores.success : cores.error;\n  50 |\n> 51 | return (\n     | ^\n  52 |   <View\n  53 |     style={[\n  54 |       styles.card,","importStack":null,"filename":"src\\components\\ItemFavorito.js","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:started","_t":1790876993615,"id":"4","platform":"android","environment":null,"entry":"index.js"}
+{"_e":"metro:bundling:progress","_t":1790876993616,"id":"4","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790876993619,"id":"4","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1790876993720,"id":"4","progress":0.10331632653061226,"total":28,"current":9}
+{"_e":"metro:bundling:progress","_t":1790876993827,"id":"4","progress":0.10331632653061226,"total":187,"current":19}
+{"_e":"metro:bundling:progress","_t":1790876994046,"id":"4","progress":0.10331632653061226,"total":187,"current":20}
+{"_e":"metro:bundling:progress","_t":1790876994145,"id":"4","progress":0.12636725863952936,"total":301,"current":107}
+{"_e":"metro:bundling:progress","_t":1790876994245,"id":"4","progress":0.20912354195599878,"total":363,"current":166}
+{"_e":"metro:bundling:progress","_t":1790876994350,"id":"4","progress":0.24462381300219138,"total":370,"current":183}
+{"_e":"metro:bundling:progress","_t":1790876994385,"id":"4","progress":0.2473046018991965,"total":370,"current":184}
+{"_e":"metro:bundling:progress","_t":1790876994490,"id":"4","progress":0.302190510720232,"total":533,"current":293}
+{"_e":"metro:bundling:progress","_t":1790876994590,"id":"4","progress":0.3547115094250154,"total":633,"current":377}
+{"_e":"metro:bundling:progress","_t":1790876994690,"id":"4","progress":0.41597500150231353,"total":645,"current":416}
+{"_e":"metro:bundling:progress","_t":1790876994789,"id":"4","progress":0.5308163265306122,"total":700,"current":510}
+{"_e":"metro:bundling:progress","_t":1790876994889,"id":"4","progress":0.692224,"total":750,"current":624}
+{"_e":"metro:bundling:progress","_t":1790876994989,"id":"4","progress":0.7997342268755724,"total":804,"current":719}
+{"_e":"metro:bundling:progress","_t":1790876995093,"id":"4","progress":0.7997342268755724,"total":877,"current":784}
+{"_e":"metro:bundling:progress","_t":1790876995193,"id":"4","progress":0.8943237146444283,"total":939,"current":888}
+{"_e":"metro:bundling:progress","_t":1790876995293,"id":"4","progress":0.987628985048482,"total":967,"current":961}
+{"_e":"metro:bundling:progress","_t":1790876995394,"id":"4","progress":0.999,"total":979,"current":979}
+{"_e":"metro:bundling:done","_t":1790876995501,"id":"4","total":979,"ms":1885.3041}
+{"_e":"metro:client_log","_t":1790876998924,"level":"error","data":["Buscar livros: ","fetch failed: Call to function 'NativeRequest.start' has been rejected.\n→ Caused by: The 2nd argument cannot be cast to type class java.net.URL (received class java.lang.String)\n→ Caused by: java.net.MalformedURLException: no protocol: Erro http://10.0.2.2:3000/livros"]}
+{"_e":"metro:client_log","_t":1790877127075,"level":"error","data":["removerFavorito","Erro 500: falha ao remover favorito."]}
+{"_e":"metro:client_log","_t":1790877368764,"level":"error","data":["removerFavorito","Erro 404: falha ao remover favorito."]}
+{"_e":"metro:server_log","_t":1790877892152,"level":"error","data":["[timeout] connection terminated with Device for app='%s' on device='%s' after not responding for %s seconds.","host.exp.exponent","sdk_gphone64_x86_64 - 16 - API 36","60"]}
+{"_e":"metro:client_log","_t":1790878825073,"level":"error","data":["[ReferenceError: Property 'favorito' doesn't exist]"]}
+{"_e":"metro:client_log","_t":1790878894777,"level":"error","data":["removerFavorito","Erro 500: falha ao remover favorito."]}

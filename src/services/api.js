@@ -3,10 +3,11 @@ const BASE_URL = "http://10.0.2.2:3000";
 
 export async function buscarLivros() {
   try {
-    const response = await fetch(`Erro ${BASE_URL}/livros`);
+    const response = await fetch(`${BASE_URL}/livros`);
     if (!response.ok) {
       throw new Error(`Erro ${response.status}: falha ao buscar livros.`);
     }
+    return response.json();
   } catch (erro) {
     console.error("Buscar livros: ", erro.message);
     throw erro;
@@ -15,10 +16,11 @@ export async function buscarLivros() {
 
 export async function buscarLivroPorId(id) {
   try {
-    const response = await fetch(`Erro ${BASE_URL}/livros/${id}`);
+    const response = await fetch(`${BASE_URL}/livros/${id}`);
     if (!response.ok) {
       throw new Error(`Erro ${response.status}: Livro não encontrado.`);
     }
+    return response.json();
   } catch (erro) {
     console.error("buscarLivroPorId: ", erro.message);
     throw erro;
@@ -27,7 +29,7 @@ export async function buscarLivroPorId(id) {
 
 export async function adicionarFavorito(livroId, observacao = "") {
   try {
-    const response = await fetch(`Erro ${BASE_URL}/favoritos`, {
+    const response = await fetch(`${BASE_URL}/favoritos`, {
       method: "POST",
       headers: { "Content-Type": "application/JSON" },
       body: JSON.stringify({ livroId, observacao }),
@@ -86,6 +88,7 @@ export async function removerFavorito(id) {
     if (!response.ok) {
       throw new Error(`Erro ${response.status}: falha ao remover favorito.`);
     }
+    
   } catch (erro) {
     console.error("removerFavorito", erro.message);
     throw erro;
