@@ -1,8 +1,15 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { View, Text, FlatList, TouchableOpacity, ActivityIndicator, StyleSheet } from 'react-native';
-import { useTema } from '../context/ThemeContext';
-import { buscarLivros } from '../services/api';
-import CardLivro from '../components/CardLivro';
+import React, { useState, useEffect, useCallback } from "react";
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  ActivityIndicator,
+  StyleSheet,
+} from "react-native";
+import { useTema } from "../context/ThemeContext";
+import { buscarLivros } from "../services/api";
+import CardLivro from "../components/CardLivro";
 
 export default function ListaLivros({ navigation }) {
   const { cores } = useTema();
@@ -12,7 +19,16 @@ export default function ListaLivros({ navigation }) {
   const [erro, setErro] = useState(null);
 
   const carregar = useCallback(async () => {
-    // TODO: chamar buscarLivros() e atualizar os estados livros, carregando e erro
+    setCarregando(true);
+    setErro(null);
+    try {
+      const dados = await buscarLivros();
+      setLivros(dados);
+    } catch (erro) {
+      setErro(erro.message);
+    } finally {
+      setCarregando(false);
+    }
   }, []);
 
   useEffect(() => {
@@ -23,7 +39,9 @@ export default function ListaLivros({ navigation }) {
     return (
       <View style={[styles.centrado, { backgroundColor: cores.background }]}>
         <ActivityIndicator size="large" color={cores.primary} />
-        <Text style={[styles.mensagem, { color: cores.textSecondary }]}>Carregando livros...</Text>
+        <Text style={[styles.mensagem, { color: cores.textSecondary }]}>
+          Carregando livros...
+        </Text>
       </View>
     );
   }
@@ -31,12 +49,16 @@ export default function ListaLivros({ navigation }) {
   if (erro) {
     return (
       <View style={[styles.centrado, { backgroundColor: cores.background }]}>
-        <Text style={[styles.mensagem, { color: cores.error }]}>Erro: {erro}</Text>
+        <Text style={[styles.mensagem, { color: cores.error }]}>
+          Erro: {erro}
+        </Text>
         <TouchableOpacity
           style={[styles.botaoTentar, { backgroundColor: cores.primary }]}
           onPress={carregar}
         >
-          <Text style={{ color: cores.primaryText, fontWeight: '600' }}>Tentar novamente</Text>
+          <Text style={{ color: cores.primaryText, fontWeight: "600" }}>
+            Tentar novamente
+          </Text>
         </TouchableOpacity>
       </View>
     );
@@ -51,14 +73,22 @@ export default function ListaLivros({ navigation }) {
           <CardLivro
             livro={item}
             cores={cores}
-            onPress={(id) => navigation.navigate('DetalheLivro', { livroId: id })}
+            onPress={(id) =>
+              navigation.navigate("DetalheLivro", { livroId: id })
+            }
           />
         )}
         contentContainerStyle={styles.lista}
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={
-          <Text style={[styles.mensagem, { color: cores.textSecondary, marginTop: 48 }]}>
-            Nenhum livro carregado ainda.{'\n'}Implemente buscarLivros() em services/api.js
+          <Text
+            style={[
+              styles.mensagem,
+              { color: cores.textSecondary, marginTop: 48 },
+            ]}
+          >
+            Nenhum livro carregado ainda.{"\n"}Implemente buscarLivros() em
+            services/api.js
           </Text>
         }
       />
@@ -70,8 +100,8 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   centrado: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     gap: 16,
     padding: 24,
   },
@@ -81,7 +111,7 @@ const styles = StyleSheet.create({
   },
   mensagem: {
     fontSize: 15,
-    textAlign: 'center',
+    textAlign: "center",
   },
   botaoTentar: {
     paddingHorizontal: 24,

@@ -62,9 +62,32 @@ export async function listarFavoritos() {
 }
 
 export async function editarFavorito(id, observacao) {
-  // TODO: implementar
+  try {
+    const response = await fetch(`${BASE_URL}/favoritos/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ observacao }),
+    });
+    if (!response.ok) {
+      throw new Error(`Erro ${response.status}: falha ao editar favorito.`);
+    }
+    return response.json();
+  } catch (erro) {
+    console.error("editarFavorito: ", erro.message);
+    throw erro;
+  }
 }
 
 export async function removerFavorito(id) {
-  // TODO: implementar
+  try {
+    const response = await fetch(`${BASE_URL}/favoritos/${id}`, {
+      method: "DELETE",
+    });
+    if (!response.ok) {
+      throw new Error(`Erro ${response.status}: falha ao remover favorito.`);
+    }
+  } catch (erro) {
+    console.error("removerFavorito", erro.message);
+    throw erro;
+  }
 }

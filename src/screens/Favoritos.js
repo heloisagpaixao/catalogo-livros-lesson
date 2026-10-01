@@ -25,7 +25,16 @@ export default function Favoritos() {
   const [erro, setErro] = useState(null);
 
   const carregar = useCallback(async () => {
-    // TODO: chamar listarFavoritos() e atualizar os estados favoritos, carregando e erro
+    setCarregando(true);
+    setErro(null);
+    try {
+      const dados = await listarFavoritos();
+      setFavoritos(dados);
+    } catch (erro) {
+      setErro(erro.message);
+    } finally {
+      setCarregando(false);
+    }
   }, []);
 
   // useFocusEffect: roda toda vez que a aba ganha foco, nao apenas na montagem.
@@ -39,11 +48,21 @@ export default function Favoritos() {
   );
 
   async function handleEditar(id, observacao) {
-    // TODO: chamar editarFavorito(id, observacao) e atualizar o item no estado favoritos
+    const atualizado = await editarFavorito(id, observacao);
+    setFavoritos((listaAtual) =>
+      listaAtual.map((favorito) => favorito.id) === id
+        ? { ...favoritos, observacao: atualizado.observacao }
+        : favorito,
+    );
   }
 
   async function handleRemover(id) {
-    // TODO: chamar removerFavorito(id) e retirar o item do estado favoritos
+    try {
+      await removerFavorito(id);
+      setFavoritos((listaAtual) => listaAtual.filter((favorito) => favorito.id !== id))
+    } catch (erro) {
+      Alert.alert("Erro", editarFavorito.message)
+    }
   }
 
   if (carregando) {
